@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./02.css" />
+    <title>猜數字</title>
+    <meta name="author" content="Una" />
+    <meta name="robots" content="index,number" />
+  </head>
+
+  <body>
+    <div id="ball">
+      <div class="halo"></div>
+      <div class="halo"></div>
+      <div class="halo"></div>
+    </div>
+    <div id="center">
+      <h1>請猜一個0到3的整數</h1>
+      <section id="b1">
+        <a href="./index.html"> <button class="btn">前往首頁</button></a>
+
+        <input id="myInput" type="text" value="" />
+        <button id="myButton">送出</button>
+      </section>
+    </div>
+
+    <script src="./text01.js"></script>
+    <script>
+      let x = 4;
+      console.log(Math.pow(x, 3));
+
+      document.getElementById("myButton").onclick = function () {
+        let x = Math.random();
+        x = x * 4;
+        x = Math.floor(x);
+        console.log(x);
+        if (x == document.getElementById("myInput").value) {
+          alert("恭喜，您答對了!");
+        } else {
+          alert("您猜錯了，這個數字是" + x);
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+:root{
+    --mouse-x;
+    --mouse-y;
+    --radius: 40px;
+
+    --factor:1;
+    --scale;
+}
+
+body{
+    background-color: black;
+}
+#ball{
+    width: var(--radius);
+    height: var(--radius);
+    border-radius: 50%;
+    background-color: #FBD771;
+    position: absolute;
+    pointer-events: none;
+    
+   
+    /* 接收JS的數值 : var(--mouse-x)*1px*/ /*求半徑: var(--radius)/2 */
+    transform: translate(calc(var(--mouse-x)*1px - var(--radius)/2),
+                        calc(var(--mouse-y)*1px - var(--radius)/2));
+}
+.halo {
+    width: var(--radius);
+    height: var(--radius);
+    border-radius: 50%;
+    opacity: 0.15;
+    background-color: #FBD771;
+    position: absolute;
+    transform: scale(calc(var(--factor) * var(--scale)));
+}
+.halo:nth-of-type(1) {
+    --factor: 0.3;
+}
+.halo:nth-of-type(2) {
+    --factor: 0.5;
+}
+.halo:nth-of-type(3) {
+    --factor: 0.9;
+}
+
+/* btn 設定 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans TC", sans-serif; //粗體
+  }
+#b1{ 
+    min-height: 90vh;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+  }
+section#b1 button.btn {
+    background-color: #3bf0e5;
+    margin: 0rem 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+section#b1 button.btn:hover {
+    background-color: #f0923b;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, rgba(0, 0, 0, .5));    
+  }

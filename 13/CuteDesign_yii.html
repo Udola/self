@@ -1,0 +1,69 @@
+<!DOCTYPE html >
+<html lang="en">
+<head >
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yii</title>
+<link href="styles/photo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jquery/jquery.min.js"></script>
+<script>
+  function effectFadeTo(targetElement,duration,from,to){
+    $(targetElement).fadeTo(duration/2,from);
+    $(targetElement).fadeTo(duration/2,to);
+  }
+</script>
+<!--  -->
+<script type="text/javascript" src="jquery/jquery.min.js"></script>
+<script type="text/javascript" src="jquery/jquery.lightbox-0.5.js"></script>
+<link type="text/css" rel="stylesheet" href="css/jquery.lightbox-0.5.css">
+<script type="text/javascript">
+  $(function(){
+    $('#contentPhoto a').lightBox({maxHeight:$(window).height()*0.9,maxWidth:$(window).width*0.9})
+  });
+</script>
+</head>
+
+<body>
+<div id="header"><a href="index.html"><img src="images1/main_logo.jpg" alt="logo" width="167" height="101" class="headerLogo noborder transition" /></a><span class="headerCopy">Copyright © Cute Design Studio All rights reserved.</span><a href="mailto:service@flag.com.tw"><img src="images1/email.png" alt="聯絡我們" width="150" height="51" class="email" /></a></div>
+<div id="content">
+<div id="contentL">
+  <div id="sidemenu"><a href="about.html"><img src="images1/about_btn.png" alt="關於我們" width="162" height="144" class="noborder transition" /></a><a href="works.html"><img src="images1/works_btn.png" alt="作品展示" width="162" height="144" class="noborder transition" /></a></div>
+  <div id="listNew">
+    <p><span class="date">07-01</span><br />
+      <a href="http://www.flag.com.tw" target="_blank">Cute Design 工作室參與的新書 「正確學會 Dreamweaver CS6 的 16 堂課」 出版了，詳細請連此</a></p>
+    <p><span class="date">05-20</span><br />
+      <a href="works.html#bags">Cute Bags 獨家設計手提袋新上架，請洽各網路商店</a></p>
+    <p><span class="date">05-01</span><br />
+      <a href="works.html#tshirts">Cute Design 個性 T 恤上架，請洽各網路商店</a></p>
+  </div>
+</div>
+<div id="contentR"> <img src="images1/titles_works.jpg" width="500" height="242" class="topPhoto" />
+  <div id="contentMain"><div id="contentPhoto">
+    <div class="photollist">
+      <p><a href="./images4/300.png" title=""><img src="./images4/300.png" alt="" onmouseover="effectFadeTo(this,2000,0.2,1)"></a></p>
+    </div>
+    <div class="photollist">
+      <p><a href="./images4/316.png" title=""><img src="./images4/316.png" alt="" onmouseover="effectFadeTo(this,2000,0.2,1)"></a></p>
+    </div>
+    <div class="photollist">
+      <p><a href="./images4/269.png" title=""><img src="./images4/269.png" alt="" onmouseover="effectFadeTo(this,2000,0.2,1)"></a></p>
+    </div>
+    <div class="photollist">
+      <p><a href="./images4/267.png" title=""><img src="./images4/267.png" alt="" onmouseover="effectFadeTo(this,2000,0.2,1)"></a></p>
+    </div>
+    <div class="photollist">
+      <p><a href="./images4/217.png" title=""><img src="./images4/217.png" alt="" onmouseover="effectFadeTo(this,2000,0.2,1)"></a></p>
+    </div>
+    <div class="photollist">
+      <p><a href="./images4/213.png" title=""><img src="./images4/213.png" alt="" onmouseover="effectFadeTo(this,2000,0.2,1)"></a></p>
+    </div>
+    <div class="photollist">
+      <p><a href="./images4/212.png" title=""><img src="./images4/212.png" alt="" onmouseover="effectFadeTo(this,2000,0.2,1)"></a></p>
+    </div>
+    <br clear="left">
+  </div></div>
+</div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
