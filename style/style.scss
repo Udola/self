@@ -85,7 +85,8 @@ main {
       z-index: 3;
 
       img {
-        margin: 10% 20%;
+        position: relative;
+        margin: 10% 0%;
         border-radius: 90%;
         border: 5px dotted #003a23;
         min-width: 150px;
