@@ -21,7 +21,7 @@
             height: 100%;
             background-image: url("images/stars.png");
             background-size: cover;
-            animation: starFlash 1s infinite alternate;
+            animation: starFlash 1s infinite alternate,starFlash2 60s linear infinite ;
         }
 
         @keyframes starFlash {
@@ -33,6 +33,16 @@
                 opacity: 0.3;
             }
         }
+        @keyframes starFlash2 {
+            form {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
 
         #sun {
             /*設定位置*/
@@ -42,35 +52,111 @@
             top: 50%;
             left: 50%;
             border-radius: 100%;
-            z-index: 3;
             /*中心點定位*/
-            margin-top: -100px;
+            margin-top: -150px;
             margin-left: -100px;
             box-shadow: 0 0 45px #f5c91a;
-            animation: sunlight 3s infinite infinite;
+            animation: sunlight 6s linear infinite;
             background-image: url("images/01.png");
             background-size: cover;
-            /*設定公轉*/
-            animation: spin 30s linear infinite;
+            z-index: 8;
+            
         }
+        
 
         @keyframes sunlight {
             from {
-                box-shadow: 0 0 45px #f5c91a;
+                box-shadow: 0 0 45px #f5c91a;transform: rotate(0);
             }
 
             to {
-                box-shadow: 0 0 90px #f5c91a;
+                box-shadow: 0 0 90px #f5c91a;transform: rotate(360deg);
             }
         }
 
         @keyframes spin {
-            from {
+            from{
                 transform: rotate(0);
+            } 
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        /*設定星球圖片大小*/
+        @keyframes size5 {
+            0% {
+                width: 10%;
             }
 
-            to {
-                transform: rotate(360deg);
+            25%{
+                width: 8%;
+            }
+            50% {
+                width: 10%;
+            }
+            75% {
+                width: 25%;
+            }
+            100% {
+                width: 10%;
+                
+            }
+        }
+        @keyframes size6 {
+            0% {
+                width: 10%;
+            }
+
+            25%{
+                width: 8%;
+            }
+            50% {
+                width: 10%;
+            }
+            75% {
+                width: 35%;
+            }
+            100% {
+                width: 10%;
+                
+            }
+        }
+        @keyframes size7 {
+            0% {
+                width: 10%;
+            }
+
+            25%{
+                width: 5%;
+            }
+            50% {
+                width: 10%;
+            }
+            75% {
+                width: 30%;
+            }
+            100% {
+                width: 10%;
+                
+            }
+        }
+        @keyframes size8 {
+            0% {
+                width: 10%;
+            }
+
+            25%{
+                width: 3%;
+            }
+            50% {
+                width: 10%;
+            }
+            75% {
+                width: 35%;
+            }
+            100% {
+                width: 10%;
+                
             }
         }
 
@@ -93,67 +179,75 @@
         }
         /*設定每一個星球公轉*/
         #ball01 {
-            width: 260px;
-            height: 260px;
-            margin-top: -130px;
-            margin-left: -130px;
-            animation: spin 20s linear infinite;
+            width: 200px;
+            height: 200px;
+            margin-top: -100px;
+            margin-left: -100px;
+            animation:spin 20s linear infinite;
+            z-index: 4;
         }
 
         #ball02 {
-            width: 340px;
-            height: 340px;
-            margin-top: -170px;
-            margin-left: -170px;
+            width: 250px;
+            height: 250px;
+            margin-top: -125px;
+            margin-left: -125px;
             animation: spin 40s linear infinite;
+            z-index: 3;
         }
 
         #ball03 {
-            width: 440px;
-            height: 440px;
-            margin-top: -220px;
-            margin-left: -220px;
+            width: 300px;
+            height: 300px;
+            margin-top: -150px;
+            margin-left: -150px;
             animation: spin 38s linear infinite;
+            z-index: 2;
         }
 
         #ball04 {
-            width: 520px;
-            height: 520px;
-            margin-top: -260px;
-            margin-left: -260px;
+            width: 380px;
+            height:380px;
+            margin-top: -150px;
+            margin-left: -190px;
             animation: spin 50s linear infinite;
+            z-index: 1;
         }
 
         #ball05 {
-            width: 700px;
-            height: 700px;
-            margin-top: -350px;
-            margin-left: -350px;
+            width: 450px;
+            height: 450px;
+            margin-top: -200px;
+            margin-left: -225px;
             animation: spin 60s linear infinite;
+            z-index: 5;
         }
 
         #ball06 {
-            width: 900px;
-            height: 900px;
-            margin-top: -450px;
-            margin-left: -450px;
+            width: 500px;
+            height: 500px;
+            margin-top: -200px;
+            margin-left: -250px;
             animation: spin 100s linear infinite;
+            z-index: 5;
         }
 
         #ball07 {
-            width: 1020px;
-            height: 1020px;
-            margin-top: -510px;
-            margin-left: -510px;
+            width: 550px;
+            height: 500px;
+            margin-top: -150px;
+            margin-left: -250px;
             animation: spin 90s linear infinite;
+            z-index: 6;
         }
 
         #ball08 {
-            width: 1120px;
-            height: 1120px;
-            margin-top: -580px;
-            margin-left: -580px;
+            width: 550px;
+            height: 550px;
+            margin-top: -150px;
+            margin-left: -300px;
             animation: spin 70s linear infinite;
+            z-index: 7;
         }
 
         /*設定水星自轉*/
@@ -203,7 +297,7 @@
             margin-top: -50px;
             margin-left: -50px;
             top: 50%;
-            animation: spin 20s linear infinite;
+            animation: spin 20s linear infinite,size5 60s linear infinite;
 
         }
 
@@ -213,7 +307,7 @@
             margin-top: -50px;
             margin-left: -50px;
             top: 50%;
-            animation: spin 20s linear infinite;
+            animation: spin 20s linear infinite,size6 100s linear infinite;
 
         }
 
@@ -223,7 +317,7 @@
             margin-top: -30px;
             margin-left: -50px;
             top: 50%;
-            animation: spin 20s linear infinite;
+            animation: spin 20s linear infinite,size7 90s linear infinite;
 
         }
 
@@ -233,7 +327,7 @@
             margin-top: -30px;
             margin-left: -30px;
             top: 50%;
-            animation: spin 20s linear infinite;
+            animation: spin 20s linear infinite,size8 70s linear infinite;
 
         }
     </style>
