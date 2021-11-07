@@ -152,7 +152,14 @@ main section.backImage button.start {
 
 section.works {
   position: relative;
-  left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section.works div.work,
@@ -162,6 +169,7 @@ section.works div.work02 {
   border: 5px #6af88e double;
   width: 90%;
   background-color: #003a23;
+  overflow: hidden;
 }
 
 section.works div.work h6,
@@ -175,9 +183,14 @@ section.works div.work02 h6 {
 
 section.works div.work h6 a,
 section.works div.work02 h6 a {
-  color: #ff7421;
+  color: #ff985d;
   background-color: #003a23;
   text-decoration: none;
+}
+
+section.works div.work h6 a:hover,
+section.works div.work02 h6 a:hover {
+  color: #f0e0d7;
 }
 
 footer {

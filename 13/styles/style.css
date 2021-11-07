@@ -180,11 +180,24 @@ section.second section.cards div.card {
           flex: 1 1 300px;
 }
 
-section.second section.cards div.card img {
-  margin: 1rem 0rem;
+section.second section.cards div.card div.image-container {
+  overflow: hidden;
   width: 15vw;
   height: 15vw;
   border-radius: 50%;
+}
+
+section.second section.cards div.card div.image-container img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+section.second section.cards div.card div.image-container img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 section.second section.cards div.card h4 {
@@ -277,25 +290,5 @@ footer section.links a {
 footer section.links a img {
   width: 5vw;
   height: 5vw;
-}
-
-div.image-container {
-  overflow: hidden;
-  width: 15vw;
-  height: 15vw;
-  border-radius: 50%;
-}
-
-div.image-container img {
-  width: 15vw;
-  height: 15vw;
-  border-radius: 50%;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-div.image-container img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 /*# sourceMappingURL=style.css.map */

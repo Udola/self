@@ -128,12 +128,22 @@ section.second{
             justify-content: space-around;
             padding: 1rem;
             flex: 1 1 300px;
-            img{
-                margin: 1rem 0rem;
+            div.image-container{
+              overflow: hidden;
+              width: 15vw;
+              height: 15vw;
+              border-radius: 50%;
+              img{
                 width: 15vw;
                 height: 15vw;
                 border-radius: 50%;
+                transition: all 0.2s;
+              }
+              img:hover{
+                transform: scale(1.2);
+              }
             }
+            
             h4{
                 font-size: 2rem;
                 margin: 1rem 0rem;
@@ -211,19 +221,5 @@ footer{
     }
   }
 }
-div.image-container{
-  overflow: hidden;
-  width: 15vw;
-  height: 15vw;
-  border-radius: 50%;
-  img{
-    width: 15vw;
-    height: 15vw;
-    border-radius: 50%;
-    transition: all 0.2s;
-  }
-  img:hover{
-    transform: scale(1.2);
-  }
-}
+
 

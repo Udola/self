@@ -73,7 +73,7 @@ main {
     width: 100%;
     background-color: #48b49c;
     z-index: 0;
-    vertical-align: middle;  
+    vertical-align: middle;
     div.filter {
       //遮色片
       flex: 2 1 400px;
@@ -83,7 +83,6 @@ main {
       border: 5px dotted #003a23;
       min-height: 60vh;
       z-index: 3;
-
     }
     div.filtertext {
       flex: 10 1 400px;
@@ -119,7 +118,9 @@ main {
 }
 section.works {
   position: relative;
-  left: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   div.work,
   div.work02 {
     min-height: 40vh;
@@ -127,16 +128,20 @@ section.works {
     border: 5px rgb(106, 248, 142) double;
     width: 90%;
     background-color: #003a23;
+    overflow: hidden;
     h6 {
       text-align: center;
       font-size: 1.5rem;
       color: #ff7421;
       margin: 1rem 0rem;
       background-color: #003a23;
-      a {
-        color: #ff7421;
+      a {        
+        color: #ff985d;
         background-color: #003a23;
         text-decoration: none;
+      }
+      a:hover{        
+        color: #f0e0d7;
       }
     }
   }
@@ -176,16 +181,16 @@ footer {
     }
   }
 }
-@media screen and (min-width:420px) {
-  footer{
-    p{
+@media screen and (min-width: 420px) {
+  footer {
+    p {
       padding-left: 15%;
     }
   }
 }
-@media screen and (max-width:424px) {
-  footer{
-    p{
+@media screen and (max-width: 424px) {
+  footer {
+    p {
       padding-left: 4%;
     }
   }
